@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Calculator</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style.css">
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<main>
+            <div class="calculator">
+                <button class="nothing"></button>
+                <div class="calculator__output-display">
+                    <div class="calculator__previous-value"></div>
+                    <div class="calculator__current-value"></div>
+                </div>
+
+                <button class="button_clear" value="clear">CE</button>
+                <button class="button_delete" value="delete">&LeftArrow;</button>
+                <button class="button_inverse" value="inverse">+/-</button>
+                <button class="button_operator" value="+">+</button>
+                <button class="button_percent button_span-two" value="%">%</button>
+                <button class="button_special button_span-two" value="sqrt">&Sqrt;</button>
+
+                <button class="button_numbers" value="7">7</button>
+                <button class="button_numbers" value="8">8</button>
+                <button class="button_numbers" value="9">9</button>
+                <button class="button_operator" value="-">-</button>
+                <button class="button_special" value="sin">sin</button>
+                <button class="button_special" value="factorial">x!</button>
+                <button class="button_special" value="reverse">1/x</button>
+                <button class="button_special" value="cubeSqrt">&#x221B;</button>
+
+                <button class="button_numbers" value="4">4</button>
+                <button class="button_numbers" value="5">5</button>
+                <button class="button_numbers" value="6">6</button>
+                <button class="button_operator" value="*">*</button>
+                <button class="button_special" value="cos">cos</button>
+                <button class="button_special" value="powerTwo">x<sup>2</sup></button>
+                <button class="button_special" value="tenPower">10<sup>x</sup></button>
+                <button class="button_special" value="twoPower">2<sup>x</sup></button>
+
+                <button class="button_numbers" value="1">1</button>
+                <button class="button_numbers" value="2">2</button>
+                <button class="button_numbers" value="3">3</button>
+                <button class="button_operator" value="/">/</button>
+                <button class="button_special" value="tan">tan</button>
+                <button class="button_special" value="powerThree">x<sup>3</sup></button>
+                <button class="button_special" value="log10">log<sub>10</sub></button>
+                <button class="button_special" value="ln">ln</button>
+
+                <button class="button_numbers button_span-two" value="0">0</button>
+                <button class="button_numbers" value=".">.</button>
+                <button class="button_equals" value="=">=</button>
+                <button class="button_special" value="ctg">ctg</button>
+                <button class="button_special" value="pi">&pi;</button>
+                <button class="button_special" value="e">e</button>
+                <button class="button_special" value="ePower">e<sup>x</sup></button>
+            </div>
+
+            <div class="history">
+                <h1>Latest calculations</h1>
+                <button class="history__button_clear">Clear history</button>
+                <hr>
+                <ul class="history__elements">
+
+                </ul>
+            </div>
+		</main>
+	</body>
+</html>

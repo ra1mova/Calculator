@@ -1,0 +1,185 @@
+body {
+	padding: 0;
+	margin: 0;
+	background: linear-gradient(200deg, rgb(63,94,251) 0%, rgb(255,153,173) 100%) no-repeat;
+	background-size: cover;
+	min-height: 100vh;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+h1 {
+	color: white;
+}
+
+button {
+	cursor: pointer;
+	font-size: 2em;
+	border: 1px solid white;
+	outline: none;
+	background-color: rgba(255, 255, 255, 0.75);
+}
+
+button:hover {
+	background-color: rgba(255, 255, 255, 0.90);
+}
+
+/* calculator */
+
+.calculator {
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	grid-template-columns: repeat(8, 100px);
+	grid-template-rows: repeat(6, 100px);
+	margin-right: 15px;
+	min-height: 100vh;
+}
+
+.calculator__output-display {
+	font-family: Arial, serif;
+	grid-column: 1 / -1;
+	background-color: rgba(0, 0, 0, 0.75);
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-around;
+	flex-direction: column;
+	padding: 10px;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+.calculator__previous-value {
+	color: rgba(255, 255, 255, 0.75);
+	font-size: 1.5em;
+}
+
+.calculator__current-value {
+	color: white;
+	font-size: 2.5em;
+}
+
+/* history */
+
+.history {
+	background-color: rgba(20,27,27,0.151);
+	padding: 15px;
+	text-align: center;
+	overflow-y: auto;
+	height: 570px;
+	width: 300px;
+}
+
+.history__button_clear {
+	color: white;
+	background: rgba(29,27,27,0.603);
+	border: none;
+	font-size: 15px;
+	padding: 10px 15px;
+	border-radius: 20px;
+	cursor: pointer;
+	font-weight: bold;
+	outline: none;
+	margin: 5px auto;
+}
+
+.history__button_clear:hover {
+	color: black;
+	background: white;
+}
+
+.history__elements {
+	list-style-type: none;
+	color: white;
+	padding: 0;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+.history__elements > li {
+	padding-bottom: 10px;
+}
+
+/* calculator buttons */
+.button_clear,
+.button_delete,
+.button_inverse {
+	background-color: rgba(255, 174, 174, 0.75);
+}
+
+.button_clear:hover,
+.button_delete:hover,
+.button_inverse:hover {
+	background-color: rgba(255, 174, 174, 0.9);
+}
+
+.button_operator,
+.button_equals,
+.button_percent {
+	background-color: rgba(115, 255, 181, 0.75);
+}
+
+.button_operator:hover,
+.button_equals:hover,
+.button_percent:hover {
+	background-color: rgba(115, 255, 181, 0.9);
+}
+
+.button_special {
+	background-color: rgba(137, 187, 255, 0.75);
+}
+
+.button_special:hover {
+	background-color: rgba(137, 187, 255, 0.9);
+}
+
+.button_span-two {
+	grid-column: span 2;
+}
+
+/* fixes for JS */
+.nothing {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background: none;
+	border: none;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+/* responsive support */
+@media only screen and (max-width: 1024px) {
+	main {
+		flex-direction: column;
+	}
+
+	.history {
+		width: 100%;
+	}
+
+	.calculator {
+		min-height: 0;
+		margin: 0;
+	}
+}
